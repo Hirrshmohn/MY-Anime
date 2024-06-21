@@ -1,0 +1,8 @@
+"architect": {
+    "build": {
+        "builder": "@angular-devkit/builder-anguler:browser",
+        "options": {
+            "outputPath": "dist/",
+        }
+    }
+}

@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)file:///C:/Users/Classic/3D%20Objects/MY%20Anime/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY Anime Website</title>
+  <link rel="icon" type="image/jpg" href="file:///C:/Users/Classic/3D%20Objects/MY%20Anime/logo.jpg">
+  <link rel="manifest" href="file:///C:/Users/Classic/3D%20Objects/MY%20Anime/manifest.json">
+  <style>
+    body{
+     
+      background: linear-gradient( #333, #333, #333, #333, #333,  #333, #333,  #333, #ad3202, #f04f04, rgb(255, 94, 0), #ff8f44, #e9bd44ee);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+    }
+
+    .video-container {
+      width: 300px;
+      margin: 20px;
+      float: left;
+      display: flex;
+      cursor: pointer;
+      transition: transform 0.3s;
+      flex: 1 1 calc(33.333% - 10px);
+      box-shadow: none;
+      text-decoration-color: transparent;
+      flex-wrap: wrap;
+    }
+    .video-container:hover{
+      transform: scale(1.05);
+      background-color: rgb(255, 138, 28);
+      text-decoration-color: #f4ffff;
+      backface-visibility: visible;
+      border-radius: 14px;
+      color: rgb(254, 255, 249);
+      box-shadow: #e94040;
+      border-color: 5px 5px 7px #f7ce1a, 5px 5px 7px #f36025ee;
+    }
+
+    .video-container > div {
+      flex: 1 1 calc(33.333% - 10px);
+      box-sizing: border-box;
+      flex-direction: column;
+      display: inline-block;
+    }
+    
+    .video-thumbnail {
+      width: 100%;
+    }
+
+
+    .container{
+            display: grid;
+            grid-template-rows: 80px auto 1fr auto 50px;
+            grid-template-columns: 3fr;
+            height: 100vh;
+            grid-template-areas: 
+            " header main footer ";
+            grid-gap: 20px;
+            padding: 10px;
+            font-weight: 600;
+            font-size: 20px;
+
+         }
+
+         @media (max-width: 678px) {
+            .container {
+                grid-template-rows: 50px 50px 50px 1fr 50px 50px 50px;
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                "header"
+                "main"
+                "footer";
+            }
+         }
+         #toggleButton {
+    background-color: #333;
+    color: red;
+    border: none;
+    border-radius: 10px;
+}
+
+#toggleButton.active:hover {
+    transform: rotate(90deg);
+    background-color: #00FF00;
+}
+
+nav {
+    border-top-left-radius: 30px 10px 30px 10px;
+    border-color: lime;
+    transform: rotate(360deg) transform 5s ease-out;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #1a1a1a;
+    color: red;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px 0;
+}
+
+.menu ul li {
+    padding: 10px 0;
+}
+
+.menu ul li a {
+    display: flex;
+    text-decoration: none;
+    color: #00FFFA;
+    padding: 5px 15px;
+}
+
+.menu ul li a:hover {
+    background-color: #FF80AF;
+}
+
+.menu.active {
+    border-radius: 35px;
+    background: transparent;
+    
+}
+
+.menu.active ul {
+    max-height: 200px; /* Adjust height as needed */
+    transform: rotate(360deg);
+    
+}
+
+.menu.active input {
+    border-radius: 50px ;
+}
+
+#toggleButton.hover-effect {
+      color: red;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    #toggleButton.hover-effect:hover {
+      color: red;
+      background-color: black;
+      border: transparent;
+      margin-right: 150px;
+    }
+
+    #toggleButton.hover-effect:hover:after {
+      content: "menu";
+      position: absolute;
+      top: 20px; /* Adjust the top position as needed */
+      left: 0;
+      color: white; /* Adjust the text color */
+      background-color: black;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    #back.hover-effect {
+      color: blue;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    #back.hover-effect:hover {
+      color: red;
+      background-color: black;
+      border: transparent;
+      margin-right: 150px;
+    }
+
+    #back.hover-effect:hover:after {
+      content: "Additional Content";
+      position: absolute;
+      top: 20px; /* Adjust the top position as needed */
+      left: 0;
+      color: white; /* Adjust the text color */
+      background-color: black;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    li {
+      color: transparent;
+    }
+
+    
+
+    #searchInput {
+      width: calc(100% - 200px);
+    }
+
+    #DemonSlayer {
+      gap: 31px;
+      
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      align-content: flex-start;
+      padding: 20px;
+    
+    }
+
+    @media (max-width: 768px) {
+
+     .gallery {
+      flex: 1 1 calc(50% - 10px);
+     }
+
+      
+      
+    }
+
+
+    @media (max-width: 480px) {
+      .gallery {
+        flex: 1 1 100%;
+      }
+    }
+
+
+    
+    .video-section h2{
+      width: 100%;
+      align-content: flex-start;
+    }
+
+    #heading {
+      
+      
+      background-position: center;
+      padding: 20px;
+      background-repeat: no-repeat;
+      justify-content: flex-start;
+      float: left;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-family: forte;
+      color: radial-gradient( #333, #333, #333, #333, #333,  #333, #333,  #333, #ad3202, #f04f04, rgb(255, 94, 0), #ff8f44, #e9bd44ee);
+    }
+
+    
+
+
+
+   
+
+
+  </style>
+</head>
+<body>
+  <header>
+
+
+    <div id="heading">
+
+      <!-- <h1>M Y  <br> A n i m e</h1> -->
+
+      <img src="./index_files/logo.png" alt="">
+
+    </div>
+
+    
+    <nav class="menu">
+      <button id="toggleButton" class="hover-effect">
+          ☰
+       </button>
+       <ul>
+        <li>   
+<!-- Search bar -->
+<br>
+<input type="text" id="searchInput" placeholder="Search...">
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</li>
+</ul>
+</nav>
+</header>
+  <div class="gallery">
+
+  
+  <div class="container">
+    
+    <main>
+      <section id="DemonSlayer" class="video-section">
+         <h2 class="search-item">
+          Demon Slayer S04 - Hashira Training Arc:
+         </h2>
+      
+   
+      <li class="search-item">
+       
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\tanjiroImage.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\Desktop\demon slayer  S4\[NGA] [Ep-01] Demon Slayer [1080p] [Sub].mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+   
+    <h3>Demon Slayer S4 Ep1: Hashira Training</h3>
+    <p>Introduction</p>
+
+  </div>
+</li>
+
+
+  
+<li class="search-item">
+
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\tanjiroImage.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\Desktop\demon slayer  S4\[NGA] EP02 [1080p] [Sub] Demon Slayer.mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Demon Slayer S4 Ep2: Hashira Training</h3>
+    <p>Water Hashira Giyu Tomiyaka's Pain</p>
+  </div>
+</li>
+
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\tanjiroImage.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="c:\Users\Classic\3D Objects\MY Anime\[NGA] S4 - EP03 [1080p] [Sub] Demon Slayer.mkv" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h3>Demon Slayer S4 Ep3: Hashira Training</h3>
+    <p>Fully Recovered Tanjiro Joins The Hashira Training</p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\tanjiroImage.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\[NGA] Ep-04 [720p] [Sub] Demon Slayer.mkv" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h3>Demon Slayer S4 EP-4: Hashira Training</h3>
+    <p>It Makes You Smile</p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\tanjiroImage.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\[NGA] Ep-05 [720p] [Sub] Demon Slayer.mkv" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h3>Demon Slayer S4 EP-5: Hashira Training</h3>
+    <p>I Even Ate A Demon</p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\tanjiroImage.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\[NGA] Ep-06 [720p] [Sub] Demon slayer.mkv" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h3>Demon Slayer S4 EP-6: Hashira Training</h3>
+    <p>I Even Ate A Demon</p>
+  </div>
+</li>
+
+</section>
+
+<section id="space" class="video-section">
+     
+
+    </section>
+
+      <section id="jjk1" class="video-section">
+
+     
+
+  <h2 class="search-item">
+    Jujutsu Kaisen S1
+   </h2>
+     
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-1 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep1</h3>
+    <p>Season 1 Episode 1</p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-2 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep2</h3>
+    <p> Season 1 Episode 2 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-3 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 EP03</h3>
+    <p> Season 1 Episode 3 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-4 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep4</h3>
+    <p> Season 1 Episode 4 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-5 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep5</h3>
+    <p> Season 1 Episode 5 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-6 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep6</h3>
+    <p> Season 1 Episode 6 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-7 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep7</h3>
+    <p> Season 1 Episode 7 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-8 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep8</h3>
+    <p> Season 1 Episode 8 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-9 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep9</h3>
+    <p> Season 1 Episode 9 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-10 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep10</h3>
+    <p> Season 1 Episode 10 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-11 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep11</h3>
+    <p> Season 1 Episode 11 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-12 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep12</h3>
+    <p> Season 1 Episode 12 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-13 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep13</h3>
+    <p> Season 1 Episode 13 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-14 (1080p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep14</h3>
+    <p> Season 1 Episode 14 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-15 (1080p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep15</h3>
+    <p> Season 1 Episode 15 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-16 (1080p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep16</h3>
+    <p> Season 1 Episode 16 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-17 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep17</h3>
+    <p> Season 1 Episode17  </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-18 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep18</h3>
+    <p> Season 1 Episode 18 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-19 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep19</h3>
+    <p> Season 1 Episode 19 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-20 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep20</h3>
+    <p> Season 1 Episode 20 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-21 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep21</h3>
+    <p> Season 1 Episode 21 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-22 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep22</h3>
+    <p> Season 1 Episode 22 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-23 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep23</h3>
+    <p> Season 1 Episode 23 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups EP-24 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S1 Ep24</h3>
+    <p> Season 1 Episode 24 </p>
+  </div>
+</li>
+
+
+<br>
+      <br>
+      <br>
+      
+      
+    </section>
+     
+      
+      
+<section class="video-section">
+ 
+
+<h2 class="search-item">
+  Jujutsu Kaisen S2
+</h2>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep1</h3>
+    <p> Season 2 Episode 1 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep2</h3>
+    <p> Season 2 Episode 2 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep3</h3>
+    <p> Season 2 Episode 3 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <video preload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="C:\Users\Classic\3D Objects\MY Anime\@joinbackups S2EP-4 (720p).mkv" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    </video>
+    <h3>Jujutsu Kaisen S2 Ep4</h3>
+    <p> Season 2 Episode 4 </p>
+  </div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep5</h3>
+    <p> Season 2 Episode 5 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep6</h3>
+    <p> Season 2 Episode 6 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep7</h3>
+    <p> Season 2 Episode 7 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep8</h3>
+    <p> Season 2 Episode 8 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep9</h3>
+    <p> Season 2 Episode 9 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep10</h3>
+    <p> Season 2 Episode 10 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep11</h3>
+    <p> Season 2 Episode 11 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep12</h3>
+    <p> Season 2 Episode 12 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep13</h3>
+    <p> Season 2 Episode 13 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep14</h3>
+    <p> Season 2 Episode 14 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep15</h3>
+    <p> Season 2 Episode 15 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep16</h3>
+    <p> Season 2 Episode  16</p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep17</h3>
+    <p> Season 2 Episode 17 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep18</h3>
+    <p> Season 2 Episode 18 </p>
+  </videopreload="none"></div>
+</li>
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep19</h3>
+    <p> Season 2 Episode 19 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep20</h3>
+    <p> Season 2 Episode 20 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep21</h3>
+    <p> Season 2 Episode 21 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep22</h3>
+    <p> Season 2 Episode 22 </p>
+  </videopreload="none"></div>
+</li>
+
+<li class="search-item">
+  <div class="video-container">
+    <videopreload="none" controls="" loop="" muted="" track="" poster="C:\Users\Classic\3D Objects\MY Anime\jjk1.jpg" class="video-thumbnail" id="videoPlayer">
+      <source src="" type="video/mp4">
+       
+      Your browser does not support the video tag.
+    
+    <h3>Jujutsu Kaisen S2 Ep23</h3>
+    <p> Season 2 Episode 23 </p>
+  </videopreload="none"></div>
+</li>
+
+
+
+
+
+
+
+
+
+</section>
+
+
+
+
+  <!-- Add more video containers as needed -->
+
+  </main>
+  <footer>
+    
+  </footer>
+</div>
+</div>
+<script>
+    // JavaScript for search functionality //
+  
+    const searchInput = document.getElementById('searchInput');
+  searchInput.addEventListener('keyup', function() {
+    const searchText = this.value.toLowerCase();
+    const items = document.querySelectorAll('.search-item');
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      if (text.includes(searchText)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+  
+                          // toggleButton for menu //
+  
+        document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('toggleButton');
+    const menu = document.querySelector('.menu');
+
+    toggleButton.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+});
+                            //-- transform button --//
+
+const myElement = document.getElementById('toggleButton');
+
+                        // Add active class to rotate //
+
+myElement.classList.add('active');
+
+                    // Remove active class to revert rotation
+                    
+myElement.classList.remove('active');
+
+</script>
+
+
+<script src="./index_files/angular.min.js.download"></script>
+
+
+
+   <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then((registration) => {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch((error) => {
+                    console.log('Service Worker registration failed:', error);
+                });
+        }
+    </script>
+
+
+
+
+</body></html>
