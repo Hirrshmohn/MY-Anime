@@ -1,1 +1,1 @@
-https://github.com/Hirrshmohn/MY-Anime/.git/index.html
+https://Hirrshmohn.github.io/MY-Anime./index.html
